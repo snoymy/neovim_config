@@ -1,0 +1,169 @@
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+argglobal
+nnoremap <buffer> <nowait> <silent> 	 :lua require'nvim-tree'.on_keypress('preview')
+nnoremap <buffer> <nowait> <silent>  :lua require'nvim-tree'.on_keypress('edit')
+nnoremap <buffer> <nowait> <silent>  :lua require'nvim-tree'.on_keypress('full_rename')
+nnoremap <buffer> <nowait> <silent>  :lua require'nvim-tree'.on_keypress('tabnew')
+nnoremap <buffer> <nowait> <silent>  :lua require'nvim-tree'.on_keypress('vsplit')
+nnoremap <buffer> <nowait> <silent>  :lua require'nvim-tree'.on_keypress('split')
+nnoremap <buffer> <nowait> <silent>  :lua require'nvim-tree'.on_keypress('cd')
+nnoremap <buffer> <nowait> <silent> - :lua require'nvim-tree'.on_keypress('dir_up')
+nnoremap <buffer> <nowait> <silent> < :lua require'nvim-tree'.on_keypress('prev_sibling')
+nnoremap <buffer> <nowait> <silent> > :lua require'nvim-tree'.on_keypress('next_sibling')
+nnoremap <buffer> <nowait> <silent> H :lua require'nvim-tree'.on_keypress('toggle_dotfiles')
+nnoremap <buffer> <nowait> <silent> I :lua require'nvim-tree'.on_keypress('toggle_ignored')
+nnoremap <buffer> <nowait> <silent> J :lua require'nvim-tree'.on_keypress('last_sibling')
+nnoremap <buffer> <nowait> <silent> K :lua require'nvim-tree'.on_keypress('first_sibling')
+nnoremap <buffer> <nowait> <silent> P :lua require'nvim-tree'.on_keypress('parent_node')
+nnoremap <buffer> <nowait> <silent> R :lua require'nvim-tree'.on_keypress('refresh')
+nnoremap <buffer> <nowait> <silent> Y :lua require'nvim-tree'.on_keypress('copy_path')
+nnoremap <buffer> <nowait> <silent> [c :lua require'nvim-tree'.on_keypress('prev_git_item')
+nnoremap <buffer> <nowait> <silent> ]c :lua require'nvim-tree'.on_keypress('next_git_item')
+nnoremap <buffer> <nowait> <silent> a :lua require'nvim-tree'.on_keypress('create')
+nnoremap <buffer> <nowait> <silent> c :lua require'nvim-tree'.on_keypress('copy')
+nnoremap <buffer> <nowait> <silent> d :lua require'nvim-tree'.on_keypress('remove')
+nnoremap <buffer> <nowait> <silent> g? :lua require'nvim-tree'.on_keypress('toggle_help')
+nnoremap <buffer> <nowait> <silent> gy :lua require'nvim-tree'.on_keypress('copy_absolute_path')
+nnoremap <buffer> <nowait> <silent> o :lua require'nvim-tree'.on_keypress('edit')
+nnoremap <buffer> <nowait> <silent> p :lua require'nvim-tree'.on_keypress('paste')
+nnoremap <buffer> <nowait> <silent> q :lua require'nvim-tree'.on_keypress('close')
+nnoremap <buffer> <nowait> <silent> r :lua require'nvim-tree'.on_keypress('rename')
+nnoremap <buffer> <nowait> <silent> x :lua require'nvim-tree'.on_keypress('cut')
+nnoremap <buffer> <nowait> <silent> y :lua require'nvim-tree'.on_keypress('copy_name')
+let s:cpo_save=&cpo
+set cpo&vim
+nnoremap <buffer> <nowait> <silent> <S-CR> :lua require'nvim-tree'.on_keypress('close_node')
+nnoremap <buffer> <nowait> <silent> <BS> :lua require'nvim-tree'.on_keypress('close_node')
+nnoremap <buffer> <nowait> <silent> <2-RightMouse> :lua require'nvim-tree'.on_keypress('cd')
+nnoremap <buffer> <nowait> <silent> <2-LeftMouse> :lua require'nvim-tree'.on_keypress('edit')
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=hide
+setlocal nobuflisted
+setlocal buftype=nofile
+setlocal nocindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=0
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'NvimTree'
+setlocal filetype=NvimTree
+endif
+setlocal fillchars=
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal nofoldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcqj
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal listchars=
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal nomodifiable
+setlocal nrformats=bin,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal scrollback=-1
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=4
+setlocal sidescrolloff=-1
+setlocal signcolumn=yes
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal spelloptions=
+setlocal statusline=%{lightline#link()}%#LightlineLeft_active_0#%(\ %{lightline#mode()}\ %)%{(&paste)?\"|\":\"\"}%(\ %{&paste?\"PASTE\":\"\"}\ %)%#LightlineLeft_active_0_1#%#LightlineLeft_active_1#%(\ %R\ %)%{(&readonly)&&(1||(&modified||!&modifiable))?\"|\":\"\"}%(\ %t\ %)%{(&modified||!&modifiable)?\"|\":\"\"}%(\ %M\ %)%#LightlineLeft_active_1_2#%#LightlineMiddle_active#%=%#LightlineRight_active_2_3#%#LightlineRight_active_2#%(\ %{&ff}\ %)%{1||1?\"|\":\"\"}%(\ %{&fenc!=#\"\"?&fenc:&enc}\ %)%{1?\"|\":\"\"}%(\ %{&ft!=#\"\"?&ft:\"no\ ft\"}\ %)%#LightlineRight_active_1_2#%#LightlineRight_active_1#%(\ %3p%%\ %)%#LightlineRight_active_0_1#%#LightlineRight_active_0#%(\ %3l:%-2c\ %)
+setlocal suffixesadd=
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'NvimTree'
+setlocal syntax=NvimTree
+endif
+setlocal tagfunc=
+setlocal tabstop=8
+setlocal tagcase=
+setlocal tags=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal winblend=0
+setlocal winhighlight=EndOfBuffer:NvimTreeEndOfBuffer,Normal:NvimTreeNormal,CursorLine:NvimTreeCursorLine,VertSplit:NvimTreeVertSplit,SignColumn:NvimTreeNormal,StatusLine:NvimTreeStatusLine,StatusLineNC:NvimTreeStatuslineNC
+setlocal winfixheight
+setlocal winfixwidth
+setlocal nowrap
+setlocal wrapmargin=0
+let s:l = 23 - ((22 * winheight(0) + 22) / 44)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 23
+normal! 0
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+nohlsearch
+doautoall SessionLoadPost
+" vim: set ft=vim :

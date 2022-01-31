@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/snoy/Documents/Coding/work_web_react/src/components/pages/sales/content/orderStatus'
+let g:netrw_dirhist_9='/home/snoy/Documents/Coding/python/thief_detector-dev'
+let g:netrw_dirhist_8='/home/snoy/Documents/Coding/python/thief_detector-dev/.git'
+let g:netrw_dirhist_7='/home/snoy/Documents/Coding/work_web_react/src'
+let g:netrw_dirhist_6='/home/snoy/Documents/Coding/work_web_react/src/components/pages/sales/content/openPaperBagOrderForm'
+let g:netrw_dirhist_5='/home/snoy/Documents/Coding/work_web_react/src/components/pages/sales/content'
+let g:netrw_dirhist_4='/home/snoy/Documents/Coding/work_web_react/src/components/pages/sales'
+let g:netrw_dirhist_3='/home/snoy/Documents/Coding/work_web_react/src/components/pages'
+let g:netrw_dirhist_2='/home/snoy/Documents/Coding/work_web_react/src/components'
+let g:netrw_dirhist_1='/home/snoy/Documents/Coding/work_web_react/src'
